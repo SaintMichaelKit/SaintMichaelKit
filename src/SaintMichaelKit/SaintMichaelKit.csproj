@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1</TargetFrameworks>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+
+		<!-- Metadados do pacote -->
+		<PackageId>SaintMichaelKit</PackageId>
+		<Version>1.0.0</Version>
+		<Title>SaintMichaelKit</Title>
+		<Authors>Vinícius Alarcon</Authors>
+		<Company>SaintMichael</Company>
+		<Description>Biblioteca utilitária modular para aplicações .NET com foco em organização, integração e extensibilidade.</Description>
+		<PackageDescription>Biblioteca utilitária modular para aplicações .NET com foco em organização, integração e extensibilidade.</PackageDescription>
+		<PackageTags>SaintMichaelKit;Utilities;Mediator;Authentication;Helpers</PackageTags>
+		<PackageProjectUrl>https://github.com/seu-usuario/seu-repo</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/seu-usuario/seu-repo</RepositoryUrl>
+		<RepositoryType>Public</RepositoryType>
+
+		<!-- Licenciamento -->
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+		<!-- README e ícone -->
+		<IncludePackageReadmeFile>true</IncludePackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>IconNuget.png</PackageIcon>
+	</PropertyGroup>
+
+</Project>
