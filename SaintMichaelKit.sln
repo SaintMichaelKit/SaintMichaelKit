@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36109.1 d17.14
+VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaintMichaelKit", "src\SaintMichaelKit\SaintMichaelKit.csproj", "{7D7696E1-8DC9-4CF1-A78F-797E3AC15DC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaintMichaelKit.LiteMediator", "src\SaintMichaelKit.LiteMediator\SaintMichaelKit.LiteMediator.csproj", "{95E0F1CF-EF80-4153-90BA-9AF20488068B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{7D7696E1-8DC9-4CF1-A78F-797E3AC15DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D7696E1-8DC9-4CF1-A78F-797E3AC15DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D7696E1-8DC9-4CF1-A78F-797E3AC15DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E0F1CF-EF80-4153-90BA-9AF20488068B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E0F1CF-EF80-4153-90BA-9AF20488068B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E0F1CF-EF80-4153-90BA-9AF20488068B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E0F1CF-EF80-4153-90BA-9AF20488068B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7D7696E1-8DC9-4CF1-A78F-797E3AC15DC0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{95E0F1CF-EF80-4153-90BA-9AF20488068B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90A469E6-D969-4A5B-BF70-89BD564C5533}

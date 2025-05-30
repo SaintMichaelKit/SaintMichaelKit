@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+
+		<!-- Metadados do pacote -->
+		<PackageId>SaintMichaelKit.LiteMediator</PackageId>
+		<Version>1.0.0</Version>
+		<Title>SaintMichaelKit.LiteMediator</Title>
+		<Authors>Vinícius Alarcon</Authors>
+		<Company>SaintMichael</Company>
+		<Description>Implementação simples de Mediator em .NET para mensagens in-process, com foco em modularidade e leveza.</Description>
+		<PackageDescription>Implementação simples de Mediator em .NET para mensagens in-process, com foco em modularidade e leveza.</PackageDescription>
+		<PackageTags>SaintMichaelKit;Mediator;LiteMediator;MediatR;InProcess;Utilities</PackageTags>
+		<PackageProjectUrl>https://github.com/SaintMichaelKit</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/SaintMichaelKit/SaintMichaelKit.LiteMediator.git</RepositoryUrl>
+		<RepositoryType>Public</RepositoryType>
+
+		<!-- Licenciamento -->
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+		<!-- README e ícone -->
+		<IncludePackageReadmeFile>true</IncludePackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>IconNuget.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="" />
+		<None Include="..\..\assets\IconNuget.png" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+	</ItemGroup>
+
+</Project>
