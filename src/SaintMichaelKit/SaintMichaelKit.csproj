@@ -2,8 +2,8 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
-		<Nullable>disable</Nullable>
 
 		<!-- Metadados do pacote -->
 		<PackageId>SaintMichaelKit</PackageId>

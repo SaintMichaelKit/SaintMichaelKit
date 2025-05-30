@@ -292,7 +292,7 @@ namespace SaintMichaelKit.Utilities
         }
 
 
-        public static string FromBase64ToString(this string str, Encoding enc = null)
+        public static string FromBase64ToString(this string str, Encoding? enc = null)
         {
             return (enc ?? Encoding.Default).GetString(FromBase64(str));
         }
@@ -301,12 +301,12 @@ namespace SaintMichaelKit.Utilities
         {
             return Convert.FromBase64String(str);
         }
-        public static string ToBase64(this string str, Encoding enc = null)
+        public static string ToBase64(this string str, Encoding? enc = null)
         {
             return ToBase64((enc ?? Encoding.Default).GetBytes(str));
         }
 
-        public static string ToBase64(this byte[] data, Encoding enc = null)
+        public static string ToBase64(this byte[] data, Encoding? enc = null)
         {
             return Convert.ToBase64String(data);
         }
