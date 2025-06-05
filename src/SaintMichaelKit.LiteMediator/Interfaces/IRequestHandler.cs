@@ -1,11 +1,15 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SaintMichaelKit.LiteMediator.Interfaces
+namespace SaintMichaelKit.LiteMediator.Interfaces;
+
+public interface IRequestHandler<in TRequest>
+    where TRequest : IRequest
 {
-    public interface IRequestHandler<TRequest, TResponse>
-        where TRequest : IRequest<TResponse>
-    {
-        Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken);
-    }
+    Task Handle(TRequest request, CancellationToken cancellationToken);
+}
+public interface IRequestHandler<in TRequest, TResponse>
+    where TRequest : IRequest<TResponse>
+{
+    Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken);
 }

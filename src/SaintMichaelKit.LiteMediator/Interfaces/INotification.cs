@@ -1,4 +1,3 @@
-namespace SaintMichaelKit.LiteMediator.Interfaces
-{
-    public interface INotification { }
-}
+namespace SaintMichaelKit.LiteMediator.Interfaces;
+
+public interface INotification { }
