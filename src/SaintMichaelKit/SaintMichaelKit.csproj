@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.1</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<ImplicitUsings>disable</ImplicitUsings>
+		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Metadados do pacote -->
 		<PackageId>SaintMichaelKit</PackageId>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<Title>SaintMichaelKit</Title>
 		<Authors>Vinícius Alarcon</Authors>
 		<Company>SaintMichael</Company>
@@ -25,12 +25,20 @@
 		<!-- README e ícone -->
 		<IncludePackageReadmeFile>true</IncludePackageReadmeFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageIcon>IconNuget.png</PackageIcon>
+		<PackageIcon>icon.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="..\..\README.md" Pack="true" PackagePath="" />
-		<None Include="..\..\assets\IconNuget.png" Pack="true" PackagePath="" />
+		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="icon.png" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="FluentValidation" Version="12.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SaintMichaelKit.LiteMediator\SaintMichaelKit.LiteMediator.csproj" />
 	</ItemGroup>
 	
 </Project>
