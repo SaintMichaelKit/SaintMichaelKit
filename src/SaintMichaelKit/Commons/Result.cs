@@ -4,12 +4,10 @@ using System.Text.Json.Serialization;
 namespace SaintMichaelKit.Commons;
 public class Result
 {
-    private readonly List<Error> _errors = [];
     public bool IsFailure => Errors.Count > 0;
     public bool IsSuccess => !IsFailure;
 
-    public IReadOnlyCollection<string> Errors => [.. _errors.Select(e => e.Message)];
-    public IReadOnlyList<Error> ErrorDetails => _errors;
+    public List<Error> Errors { get; } = [];
 
     protected Result() { }
 
@@ -18,7 +16,7 @@ public class Result
         if (errors == null || !errors.Any())
             throw new ArgumentException("Error list cannot be null or empty for a failed result.", nameof(errors));
 
-        _errors.AddRange(errors);
+        Errors.AddRange(errors);
     }
 
     [JsonConstructor]
@@ -28,7 +26,7 @@ public class Result
             throw new ArgumentException("Error list cannot be null or empty for a failed result.", nameof(errors));
 
         if (!isSuccess)
-            _errors.AddRange(errors!);
+            Errors.AddRange(errors!);
     }
 
     public static Result Ok() => new();
