@@ -10,18 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v3
 
       - name: Set up .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0.x'
 
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
+      - name: Restore
+        run: dotnet restore SaintMichaelKit.sln
 
-      - name: Create the Package
-        run: dotnet pack --configuration Release
+      - name: Build
+        run: dotnet build SaintMichaelKit.sln --configuration Release --no-restore
 
-      - name: Publish
-        run: dotnet nuget push "bin/Release/*.nupkg" -k ${{ secrets.NUGET_SECRET }} -s https://api.nuget.org/v3/index.json 
+      - name: Pack SaintMichaelKit.LiteMediator
+        run: dotnet pack src\SaintMichaelKit.LiteMediator\SaintMichaelKit.LiteMediator.csproj --configuration Release --output ./nupkgs
+        
+      - name: Pack SaintMichaelKit
+        run: dotnet pack src\SaintMichaelKit\SaintMichaelKit.csproj --configuration Release --output ./nupkgs
+        
+      - name: Push packages to NuGet
+        run: dotnet nuget push "./nupkgs/*.nupkg" -k ${{ secrets.NUGET_SECRET }} -s https://api.nuget.org/v3/index.json --skip-duplicate
