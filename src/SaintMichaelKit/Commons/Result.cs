@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 
 namespace SaintMichaelKit.Commons;
@@ -8,7 +8,8 @@ public class Result
     public bool IsFailure => Errors.Count > 0;
     public bool IsSuccess => !IsFailure;
 
-    public IReadOnlyList<Error> Errors => _errors;
+    public IReadOnlyCollection<string> Errors => [.. _errors.Select(e => e.Message)];
+    public IReadOnlyList<Error> ErrorDetails => _errors;
 
     protected Result() { }
 
