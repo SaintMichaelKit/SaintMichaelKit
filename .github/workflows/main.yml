@@ -24,10 +24,10 @@ jobs:
         run: dotnet build SaintMichaelKit.sln --configuration Release --no-restore
 
       - name: Pack SaintMichaelKit.LiteMediator
-        run: dotnet pack src\SaintMichaelKit.LiteMediator\SaintMichaelKit.LiteMediator.csproj --configuration Release --output ./nupkgs
-        
+        run: dotnet pack src/SaintMichaelKit.LiteMediator/SaintMichaelKit.LiteMediator.csproj --configuration Release --output ./nupkgs
+
       - name: Pack SaintMichaelKit
-        run: dotnet pack src\SaintMichaelKit\SaintMichaelKit.csproj --configuration Release --output ./nupkgs
-        
+        run: dotnet pack src/SaintMichaelKit/SaintMichaelKit.csproj --configuration Release --output ./nupkgs
+
       - name: Push packages to NuGet
         run: dotnet nuget push "./nupkgs/*.nupkg" -k ${{ secrets.NUGET_SECRET }} -s https://api.nuget.org/v3/index.json --skip-duplicate
