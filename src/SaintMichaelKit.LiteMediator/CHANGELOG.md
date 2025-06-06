@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.1.1] - 2025-06-06
+### Fixed
+- Corrected the handling of the error list in Result, ensuring errors are properly accumulated and returned.
+
 ## [1.1.0] - 2025-06-05
 
 ### Added
