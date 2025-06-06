@@ -1,11 +1,13 @@
-using System.Threading;
-using System.Threading.Tasks;
+namespace SaintMichaelKit.LiteMediator.Interfaces;
 
-namespace SaintMichaelKit.LiteMediator.Interfaces
+/// <summary>
+/// Handles a specific type of notification.
+/// </summary>
+public interface INotificationHandler<TNotification>
+    where TNotification : INotification
 {
-    public interface INotificationHandler<TNotification>
-        where TNotification : INotification
-    {
-        Task Handle(TNotification notification, CancellationToken cancellationToken);
-    }
+    /// <summary>
+    /// Handles the notification.
+    /// </summary>
+    Task Handle(TNotification notification, CancellationToken cancellationToken);
 }
