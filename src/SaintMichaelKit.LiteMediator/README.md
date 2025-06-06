@@ -83,7 +83,7 @@ await mediator.Publish(new MyNotification { /* ... */ });
 Check out the [GitHub repository](https://github.com/SaintMichaelKit/SaintMichaelKit) for full documentation, examples, and source code.
 
 ## Changelog
-See the [CHANGELOG.md](CHANGELOG.md) for details on new features, bug fixes, and version history.
+See the [CHANGELOG.md](https://github.com/SaintMichaelKit/SaintMichaelKit/blob/main/src/SaintMichaelKit.LiteMediator/CHANGELOG.md) for details on new features, bug fixes, and version history.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/SaintMichaelKit/SaintMichaelKit/blob/main/src/SaintMichaelKit.LiteMediator/LICENSE) file for details.
