@@ -26,12 +26,12 @@ Modular utility library for .NET applications, designed to improve **code organi
 Install via NuGet Package Manager:
 
 ```bash
-dotnet add package SaintMichaelKit --version 1.1.0
+dotnet add package SaintMichaelKit --version 1.*
 ```
 Or via Package Manager Console:
 
 ```bash
-Install-Package SaintMichaelKit -Version 1.1.0
+Install-Package SaintMichaelKit -Version 1.*
 ```
 
 ---

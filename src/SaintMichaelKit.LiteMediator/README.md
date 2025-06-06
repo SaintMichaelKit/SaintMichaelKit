@@ -22,12 +22,12 @@ Lightweight and modular **Mediator** implementation for in-process messaging in 
 Install via NuGet Package Manager:
 
 ```bash
-dotnet add package SaintMichaelKit.LiteMediator --version 1.1.0
+dotnet add package SaintMichaelKit.LiteMediator --version 1.*
 ```
 Or via Package Manager Console:
 
 ```bash
-Install-Package SaintMichaelKit.LiteMediator -Version 1.1.0
+Install-Package SaintMichaelKit.LiteMediator -Version 1.*
 ```
 
 ---
